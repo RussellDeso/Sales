@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+
+
 abstract class Employee {
     private ArrayList<Client> Clients;
     private String employeeName;
@@ -8,9 +10,14 @@ abstract class Employee {
         employeeName=name;
         salesID=id;
         Manager=manager;
+        Clients = new ArrayList<Client>();
     }
     public boolean addClient(Client client){
-        Clients.add(client);
+        try {Clients.add(client);
+            Clients.sort(null);
+            return true;
+            }
+        catch (Exception e){ return false;}
     }
     public ArrayList<Client> getClients() {
         return Clients;
