@@ -5,8 +5,6 @@ public class SalesAssociate extends Employee {
 
     }
     double bonus(){
-        double bonus;
-        clientNum=this.getClients().size();
-        bonus = clientNum*1000;
+        return this.getClients().size()*1000.0;
     }
 }
