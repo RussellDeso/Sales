@@ -3,8 +3,9 @@ import java.util.ArrayList;
 public class SalesManager extends Employee{
     ArrayList<SalesAssociate> associates;
 
-    public SalesManager(String name, long id, SalesManager manager) {
-        super(name, id, manager);
+    public SalesManager(String name, ArrayList<SalesAssociate> employees, SalesManager manager,long id) {
+        super(name, manager, id);
+        associates=employees;
     }
 
     public ArrayList<SalesAssociate> getAssociates() {

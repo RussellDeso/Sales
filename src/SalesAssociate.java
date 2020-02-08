@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 
 public class SalesAssociate extends Employee {
-    public SalesAssociate(String name, long id, SalesManager manager) {
-        super(name, id, manager);
+    public SalesAssociate(String name, SalesManager manager,long id) {
+        super(name, manager, id);
     }
-
     public String toString(){
         String AssociateString ="Sales Associate: "+ this.employeeName + ". SalesManager: " + this.Manager.employeeName + " " + this.Manager.salesID +". Clients: ";
         String clients="";
