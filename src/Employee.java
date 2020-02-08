@@ -23,4 +23,16 @@ abstract class Employee {
     public ArrayList<Client> getClients() {
         return Clients;
     }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public long getSalesID() {
+        return salesID;
+    }
+
+    public SalesManager getManager() {
+        return Manager;
+    }
 }
