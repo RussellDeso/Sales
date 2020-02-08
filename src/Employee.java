@@ -6,7 +6,7 @@ abstract class Employee {
     private String employeeName;
     private long salesID;
     private SalesManager Manager;
-    public Employee(String name, long id, SalesManager manager){
+    public Employee(String name, SalesManager manager, long id){
         employeeName=name;
         salesID=id;
         Manager=manager;
