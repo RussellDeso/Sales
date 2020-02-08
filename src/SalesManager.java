@@ -17,8 +17,14 @@ public class SalesManager extends Employee{
 
     public String toString(){
         String employees = "";
-        for()
-        return "Sales Manager: " + this.
+        for(SalesAssociate s : associates){
+            employees = employees + s.getEmployeeName() + " " + s.getSalesID() + ". ";
+        }
+        String clients = "";
+        for(Client c : this.getClients()){
+            clients = clients + c.getClientName() + " " + c.getClientID() + ". ";
+        }
+        return "Sales Manager: " + this.getEmployeeName() + ". Employees: " + employees + "Clients: " + clients + "Bonus: " + bonus();
     }
 
     double bonus(){
