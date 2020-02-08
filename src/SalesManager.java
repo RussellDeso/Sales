@@ -16,7 +16,9 @@ public class SalesManager extends Employee{
     }
 
     public String toString(){
-        return "hehe";
+        String employees = "";
+        for()
+        return "Sales Manager: " + this.
     }
 
     double bonus(){
