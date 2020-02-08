@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 abstract class Employee {
-    private ArrayList Clients = new ArrayList();
+    private ArrayList<Client> Clients;
     private String employeeName;
     private long salesID;
     private SalesManager Manager;
@@ -12,7 +12,7 @@ abstract class Employee {
     public boolean addClient(Client client){
         Clients.add(client);
     }
-    public ArrayList getClients() {
+    public ArrayList<Client> getClients() {
         return Clients;
     }
 }
