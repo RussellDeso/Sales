@@ -14,6 +14,9 @@ public class Client implements Comparable<Client>{
         clientID=ID;
         clientName=Name;
     }
+    public String toString(){
+        return (clientName + " "+ clientID);
+    }
 
     @Override
     public int compareTo(Client o) {
