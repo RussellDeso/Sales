@@ -19,6 +19,7 @@ abstract class Employee {
             }
         catch (Exception e){ return false;}
     }
+
     public ArrayList<Client> getClients() {
         return Clients;
     }
