@@ -10,7 +10,7 @@ public class SalesAssociate extends Employee {
         if(this.getClients().size>1) {
             int count=0;
             while (count<this.getClients().size()) {
-                clients = clients + getCliets().get(count).toString();
+                clients = clients + getClients().get(count).toString();
                 count++;
                 if (count = this.getClients().size())
                     clients = clients + ", ";
