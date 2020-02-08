@@ -5,7 +5,7 @@ public class SalesAssociate extends Employee {
         super(name, manager, id);
     }
     public String toString(){
-        String AssociateString ="Sales Associate: "+ this.employeeName + ". SalesManager: " + this.Manager.employeeName + " " + this.Manager.salesID +". Clients: ";
+        String AssociateString ="Sales Associate: "+ this.getEmployeeName() + ". SalesManager: " + this.getManager().getEmployeeName() + " " + this.getManager().getSalesID() +". Clients: ";
         String clients="";
         if(this.getClients().size>1) {
             int count=0;
