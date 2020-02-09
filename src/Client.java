@@ -1,6 +1,7 @@
 public class Client implements Comparable<Client>{
     private int clientID;
     private String clientName;
+    private Employee employee;
 
     public Client(int ID, String Name){
         clientID=ID;
@@ -20,6 +21,14 @@ public class Client implements Comparable<Client>{
     }
     public String toString(){
         return (clientName + " "+ clientID);
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     @Override

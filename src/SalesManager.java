@@ -1,34 +1,50 @@
 import java.util.ArrayList;
 
 public class SalesManager extends Employee{
-    ArrayList<SalesAssociate> associates;
+    ArrayList<Employee> employees;
 
-    public SalesManager(String name, ArrayList<SalesAssociate> employees, SalesManager manager,long id) {
+    public SalesManager(String name, SalesManager manager, long id) {
         super(name, manager, id);
-        associates=employees;
+        this.employees = new ArrayList<Employee>();
     }
 
-    public ArrayList<SalesAssociate> getAssociates() {
-        return associates;
+    public ArrayList<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setAssociates(ArrayList<SalesAssociate> associates) {
-        this.associates = associates;
+    public void addEmployee(Employee employee){
+        employees.add(employee);
     }
 
     public String toString(){
-        String employees = "";
-        for(SalesAssociate s : associates){
-            employees = employees + s.getEmployeeName() + " " + s.getSalesID() + ". ";
+        String allEmployees = "";
+        if(this.getEmployees().size()>1) {
+            int count=0;
+            while (count<this.getEmployees().size()) {
+                allEmployees = allEmployees + getEmployees().get(count).getEmployeeName() + " " + getEmployees().get(count).getSalesID();
+                count++;
+                if (count == this.getEmployees().size())
+                    allEmployees = allEmployees + ". ";
+                else
+                    allEmployees = allEmployees + ", ";
+            }
         }
         String clients = "";
-        for(Client c : this.getClients()){
-            clients = clients + c.getClientName() + " " + c.getClientID() + ". ";
+        if(this.getClients().size()>1) {
+            int count=0;
+            while (count<this.getClients().size()) {
+                clients = clients + getClients().get(count).getClientName() + " " + getClients().get(count).getClientID();
+                count++;
+                if (count == this.getClients().size())
+                    clients = clients + ". ";
+                else
+                    clients = clients + ", ";
+            }
         }
-        return "Sales Manager: " + this.getEmployeeName() + ". Employees: " + employees + "Clients: " + clients + "Bonus: " + bonus();
+        return "Sales Manager: " + this.getEmployeeName() + ". Employees: " + allEmployees + "Clients: " + clients + "Bonus: " + bonus();
     }
 
     double bonus(){
-        return(associates.size()*5000.0 + getClients().size()*2000.0);
+        return(employees.size()*5000.0 + getClients().size()*2000.0);
     }
 }

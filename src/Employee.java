@@ -15,6 +15,7 @@ abstract class Employee {
     public boolean addClient(Client client){
         try {Clients.add(client);
             Clients.sort(null);
+            client.setEmployee(this);
             return true;
             }
         catch (Exception e){ return false;}
