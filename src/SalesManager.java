@@ -18,7 +18,7 @@ public class SalesManager extends Employee{
 
     public String toString(){
         String allEmployees = "";
-        if(this.getEmployees().size()>1) {
+        if(this.getEmployees().size()>=1) {
             int count=0;
             while (count<this.getEmployees().size()) {
                 allEmployees = allEmployees + getEmployees().get(count).getEmployeeName() + " " + getEmployees().get(count).getSalesID();
@@ -30,7 +30,7 @@ public class SalesManager extends Employee{
             }
         }
         String clients = "";
-        if(this.getClients().size()>1) {
+        if(this.getClients().size()>=1) {
             int count=0;
             while (count<this.getClients().size()) {
                 clients = clients + getClients().get(count).getClientName() + " " + getClients().get(count).getClientID();

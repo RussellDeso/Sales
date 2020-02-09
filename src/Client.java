@@ -20,7 +20,7 @@ public class Client implements Comparable<Client>{
         return clientName;
     }
     public String toString(){
-        return (clientName + " "+ clientID);
+        return ("Client: " + clientName + ". Sales Employee: " + this.employee.getEmployeeName() + " " + this.employee.getSalesID());
     }
 
     public Employee getEmployee() {

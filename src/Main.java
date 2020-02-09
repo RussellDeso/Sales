@@ -18,7 +18,15 @@ public class Main {
        Harry.addClient(Ann);
        Nancy.addClient(Daniel);
        Nancy.addClient(Susan);
-       System.out.println(Jane.toString());
-       System.out.println(Tom.toString());
+       System.out.println(Jane);
+       System.out.println(Tom);
+       System.out.println(Harry);
+       System.out.println(Nancy);
+       System.out.println(Ann);
+       System.out.println(John);
+       System.out.println(Susan);
+       System.out.println(David);
+       System.out.println(Sarah);
+       System.out.println(Daniel);
     }
 }
